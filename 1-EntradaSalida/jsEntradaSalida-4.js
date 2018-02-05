@@ -5,8 +5,7 @@
 function Mostar()
 {
 	var dato
-	dato = prompt("")
-	document.getElementById("fede");
+	dato = document.getElementById("elNombre").value = prompt("");
+	
 	
 }
-
