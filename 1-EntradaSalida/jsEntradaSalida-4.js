@@ -4,6 +4,9 @@
 */
 function Mostar()
 {
+	var dato
+	dato = prompt("")
+	document.getElementById("fede");
 	
 }
 
