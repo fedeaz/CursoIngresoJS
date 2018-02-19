@@ -15,6 +15,7 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
   numeroSecreto = Math.floor((Math.random()*101-1)+1);
+  contadorIntentos = 0;
 	 
 		//alert(numeroSecreto );
 	
@@ -41,6 +42,17 @@ document.getElementById("intentos").value = contadorIntentos;
   {
     alert("Falta...");
   }
-
+  if(contadorIntentos > 10)
+  {
+    contadorIntentos = null;
+  }
+  if(numeroSecreto == numeroGanador)
+  {
+    numeroSecreto +1;
+  }
+else if(numeroSecreto > 100)
+{
+  numeroSecreto -1;
+}
 	
 }
