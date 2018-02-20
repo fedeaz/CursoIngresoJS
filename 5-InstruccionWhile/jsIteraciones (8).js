@@ -9,30 +9,45 @@ function Mostrar()
 	var respuesta='si';
 	while (respuesta == "si")
 	{
+		contador ++;
 		numero = prompt("")
-		numero = parseInt(numero)
-		while (isNaN(numero))
+		if (numero == null)
 		{
-			if (numero > 0)
+			break
+		}
+		numero = parseInt(numero)
+
+		while (isNaN(numero))
 			{
-				contador ++;
+				alert("ingrese un numero");
+				return
+			}
+		if (numero > 0)
+			{
 				positivo += numero;
 			}
-			else
+		else
 			{
-					negativo *= numnero;}}
+				negativo *= numnero;
+			   }
+		
 		
 		numero = confirm("está seguro ?")
+		
 		if (numero != true)
 		{
 			break
 		}
+		else
+			{
+				document.getElementById('suma').value=positivo;
+                document.getElementById('producto').value=negativo;
+			}
 
 
 	}
 
 
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
+
 
 }//FIN DE LA FUNCIÓN
