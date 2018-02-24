@@ -8,7 +8,7 @@ function Mostrar()
     {
         if(ingre %i == 0)
         {
-            contador++
+            contador++                 //lo que necesito saber es cunatos divisores tiene
         }
         
     }

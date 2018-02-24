@@ -1,8 +1,10 @@
 function Mostrar()
 {
-
+do{
 var clave = prompt("ingrese el número clave.")
-while (clave != "utn750" && clave != null)
+
+}
+ while (clave != "utn750" && clave != null)
 {
 clave = prompt("Error igrese su calave")
 if (clave == null)
