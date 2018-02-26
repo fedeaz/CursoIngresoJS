@@ -11,11 +11,14 @@ function ComenzarIngreso ()
 {
 
     var edad = "si";
-    var sexo = prompt("ingrese su sexo con m o f")
+    var sexo = "si"
     var estadoc = "si"
     var sueldo = "si"
-    var legajo
-    var nacion
+    var legajo = "si"
+    var nacion = "si"
+    var primera = true
+    var max
+    var min
 
     
       while(edad == "si")
@@ -42,11 +45,15 @@ function ComenzarIngreso ()
         
      }
    }
-   while(sexo != "f" && sexo != "m")
+   while(sexo == "si")
+   {
+       sexo = prompt("ingrese su sexo con m o f")
+       while(sexo != "f" && sexo != "m")
    {
        alert("Ingrese un sexo valido");
        sexo = prompt("ingrese su sexo con m o f");
        continue 
+   }
    }
    document.getElementById("Sexo").value = sexo;
 
@@ -63,22 +70,18 @@ function ComenzarIngreso ()
        if(estadoc === 1)
        {
            estadoc = "soltero";
-           //document.getElementById("EstadoCivil").value = estadoc;
        }
        else if(estadoc === 2)
        {
            estadoc = "casados";
-           //document.getElementById("EstadoCivil"),value = estadoc;
        }
        else if(estadoc === 3)
        {
            estadoc = "divorciados";
-          // document.getElementById("EstadoCivil"),value = estadoc;
        }
        else if(estadoc === 4)
        {
            estadoc = "viudos";
-           //document.getElementById("EstadoCivil"),value = estadoc;
        }
        document.getElementById("EstadoCivil").value = estadoc;
     
@@ -109,15 +112,73 @@ function ComenzarIngreso ()
            sueldo = prompt("ingrese su sueldo bruto");
            sueldo = parseInt(sueldo);
            continue
-       }
-       while(sueldo >= 8000)
-       {
-           document.getElementById("Sueldo").value = sueldo;
-       }
+       } 
+         document.getElementById("Sueldo").value = sueldo;
+        
+    if( primera == true)
+{
+    primera = false
+    max = sueldo
+    min = sueldo
+}
+
+if(nacion == "nacionalizado/a")
+{
+    if(sueldo > max)
+    {
+        max = sueldo
+    }
 
    }
 
-   while ()
+   while (legajo == "si")
+   {
+       legajo = prompt("ingrese el Legajo")
+       legajo = parseInt(legajo)
+       while( isNaN(legajo))
+       {
+           alert("ingrese un Legajo correcto")
+           legajo = prompt("ingrese el Legajo")
+           legajo = parseInt(legajo)
+           continue
+       }
+       while(legajo >= 9999)
+       {
+           alert("ingrese un Legajo correcto")
+           legajo = prompt("ingrese el Legajo")
+           legajo = parseInt(legajo)
+           continue
+       }
+           document.getElementById("Legajo").value = legajo
+   }
+
+   while(nacion == "si")
+   {
+       nacion = prompt("Ingrese su Nacionalidad  “A” para argentinos, “E” para extranjeros, “N” para nacionalizados ");
+       while(nacion != "a" && nacion != "e" && nacion != "n")
+       {
+           alert("ingrese una Nacionalidad correcta:  “A” para argentinos, “E” para extranjeros, “N” para nacionalizados ");
+           nacion = prompt("Ingrese su Nacionalidad  “A” para argentinos, “E” para extranjeros, “N” para nacionalizados ");
+           continue
+       }
+       if(nacion == "a")
+       {
+           nacion = "Argentino/a"
+       }
+       else if( nacion == "e")
+       {
+           nacion = "Extranjero/a"
+       }
+       else if( nacion == "n")
+       {
+           nacion ="nacionalizado/a"
+       }
+       document.getElementById("Nacionalidad").value = nacion
+   }
+
+
+}
+
 
 
 }
