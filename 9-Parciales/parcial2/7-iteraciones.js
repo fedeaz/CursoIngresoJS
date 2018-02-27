@@ -29,14 +29,7 @@ function Mostrar()
 		contador++;
 	    acumulador += notas;
 		
-		if (contador ==)
-			{
-				baja = notas
-			}
-			else if (nota< baja)
-			{
-				baja = notas
-			}
+			
 		if( seco == "m" && nota >6 )
 		{
 			contadorDeVarones 
@@ -53,10 +46,11 @@ function Mostrar()
 			{
 				resultado = baja
 			}
-			alert("el promedio es " + resultado2);
-			alert("la nota mas baja es " + resultado);
+			
 			
 		}
-	
+		
+		alert("el promedio es " + resultado2);
+		alert("la nota mas baja es " + resultado);
 }
 
