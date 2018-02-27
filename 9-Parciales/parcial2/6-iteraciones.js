@@ -7,23 +7,21 @@ function Mostrar()
 	var primera = true
 	var max
 	var min
-	var final
+
 	
 
-	while(importe == "si")
+	while(contador <=6)
 	{
 		importe = prompt("Ingrese su importe");
 
-		importe = parseInt(importe)
+		importe = parseInt(importe);
 
-		while (isNaN(importe))
-		  {  
-			alert("ingrese un importe correcto");
-			importe = prompt("Ingrese su importe");
-		    importe = parseInt(importe);
-		    }
-		 while (importe < 0 && contador ==6)
-		{
+		 while (importe <= 0)
+		
+			{
+				importe = prompt("Ingrese su importe");
+		        importe = parseInt(importe);
+			}
 			contador ++
 			if (primera == true)
 	      	{	
@@ -31,23 +29,19 @@ function Mostrar()
 			max = importe
 			min = importe
             }
-			else if ( importe < max )
-			{
-				final = max
-			}
-			else if (importe > max)
-			{
-				final = importe
-			}
-			if (importe < min)
-			{
-				alert("el importe minimo fue " + importe) 
-			}
-			else if (importe > min)
-			{
-				alert("el importe minimo fue " + min)
-			}
-		}
+			if ( max < importe )
+				{
+					max = importe;
+				}
+				else if (min > importe)
+						{
+							min = importe;
+						}
+						
+			
+			
+		
 	}
+	alert("el importe maximo es " + max + " el impote minimo es " + min);
 }
 

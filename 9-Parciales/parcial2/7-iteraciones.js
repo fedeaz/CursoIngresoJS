@@ -11,31 +11,25 @@ function Mostrar()
 	var baja
 	var resultado
 
+	notas = prompt("ingrese una nota")
+	notas = parseInt(notas)
 
+	while(nota <=0 || notas > 10)
+          {
+			notas = prompt("ingrese una nota")
+			notas = parseInt(notas)
+          }
 
 	sexo = prompt("ingresar M ó F")
 	while(sexo != "m" && sexo !="f")
 	{
 		alert("Ingrese un sexo valido")
 		sexo = prompt("ingresar M ó F")
-		continue
 	}
-
-	notas = prompt("ingrese una nota")
-	notas = parseInt(notas)
-	while (isNaN(notas))
-	{
-		alert("ingrese una nota correcta")
-		notas = prompt()
-	    notas = parseInt(notas)
-	}
-
-	while( notas <0 || notas >10)
-	{
 		contador++;
 	    acumulador += notas;
 		
-		if (contador == 1)
+		if (contador ==)
 			{
 				baja = notas
 			}
@@ -63,7 +57,6 @@ function Mostrar()
 			alert("la nota mas baja es " + resultado);
 			
 		}
-	}
 	
 }
 
