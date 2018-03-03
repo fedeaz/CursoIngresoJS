@@ -1,14 +1,8 @@
 function Mostrar()
 {
-    var ancho
-    var largo
-    var resultado
-    largo = document.getElementById("alrgo").value;
-    ancho = document.getElementById("ancho").value;
-    largo = parseInt(largo)
-    ancho = parseInt(ancho)
-    resultado = largo * 2 + ancho * 2 * 3;
-    alert("el resultado es " + resultado);
-
-
+var dato1 = document.getElementById("alrgo").value;
+var dato2 = document.getElementById("ancho").value;
+var perimetro = dato1 *2 + dato2*2;
+var alambre = perimetro * 3;
+alert("se necesitan " + alambre + " metros de alambre");
 }

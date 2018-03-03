@@ -1,8 +1,11 @@
 function Mostrar()
 {
-  var importe
+ var importe = prompt("introduzca el importe del prodicto");
+ importe = parseInt(importe);
+ var iva = importe *21 /100;
+ var importeFinal = iva + importe
+ document.getElementById("importeFinal").value = importeFinal;
 
-  importe = document.getElementById("importeFinal").value;
-  document.getElementById("importeFinal").value = prompt("importe") *21 / 100;
+
 
 }
