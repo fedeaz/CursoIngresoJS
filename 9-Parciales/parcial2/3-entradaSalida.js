@@ -1,18 +1,18 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	
-	var ancho
-	var largo
+	var ancho = document.getElementById("ancho").value;
+	var largo = document.getElementById("largo").value;
 	var perimetro
-	var resultado
-	ancho = document.getElementById("ancho").value;
-	largo = document.getElementById("largo").value;
+	var perimetroFinal
 	ancho = parseInt(ancho);
-	largo = parseInt(largo);
-	perimetro = ancho * 2 + largo * 2;
-	resultado = perimetro * 6 ;
-	alert(resultado);
+	larog = parseInt(largo);
+
+	perimetro = ancho *2 + largo * 2;
+	perimetroFinal = perimetro *6;
+
+	alert("se necesitan " + perimetroFinal);
+
 
 
 	

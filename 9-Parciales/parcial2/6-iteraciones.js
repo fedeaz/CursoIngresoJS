@@ -1,47 +1,48 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	alert("Funciona 6-iteraciones");
-	var importe = "si";
-	var contador = 0;
-	var primera = true
-	var max
-	var min
-
+	var importe
 	
+	var dias = 0
+	var vandera = true
+	var importeMaximo
+	var importeMinimo
 
-	while(contador <=6)
+while(dias <= 6)
 	{
-		importe = prompt("Ingrese su importe");
-
+		importe = prompt("ingrese el importe de las ventas");
 		importe = parseInt(importe);
+		while(importe <=0)
+		{
+		importe = prompt("ingrese un importe de ventas valido");
+	    importe = parseInt(importe);
+		}
 
-		 while (importe <= 0)
+		dias ++
 		
+		if(vandera == true)
 			{
-				importe = prompt("Ingrese su importe");
-		        importe = parseInt(importe);
+				vandera = false
+				importeMaximo = importe
+				importeMinimo = importe
 			}
-			contador ++
-			if (primera == true)
-	      	{	
-			primera = false
-			max = importe
-			min = importe
-            }
-			if ( max < importe )
-				{
-					max = importe;
-				}
-				else if (min > importe)
-						{
-							min = importe;
-						}
-						
-			
-			
 		
+		if(importeMaximo < importe)
+			{
+				importeMaximo = importe
+			}
+		else if (importeMinimo > importe)
+			{
+				importeMinimo = importe
+			}
+
+
 	}
-	alert("el importe maximo es " + max + " el impote minimo es " + min);
+alert("el importe maximo fue " + importeMaximo + " el importe minimo fue " + importeMinimo);
+
+
+
+
+
 }
 

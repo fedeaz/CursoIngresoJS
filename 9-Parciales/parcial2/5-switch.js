@@ -2,26 +2,22 @@
 function Mostrar()
 {
 	alert("Funciona 5-Switch");
-	var mes = prompt()
+	
+	var mesDelAño = prompt("ingrese un mes del año");
 
-	switch(mes)
-	{
-		case "enero":
+	switch(mesDelAño)
+		{
+			case("enero"):
+			alert("Veranito!!!!");
+			break
 
-		alert("Veranito!!!!");
-		break
+			case("febrero"):
+			alert("Veranito!!!!");
+			break
 
-		case "febrero" :
-
-		alert("Veranito!!!!");
-		break
-
-		default:
-
-		alert("“extraño enero y febrero!!!")
-
-
-	}
+			default:
+			alert("extraño enero y febrero!!!");
+		}
 	
 }
 

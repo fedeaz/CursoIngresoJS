@@ -1,16 +1,11 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	var importe
-	var resultado
-	var porcentaje
-	importe = prompt("");
+	var importe = prompt("ingrese su importe");
 	importe = parseInt(importe);
-	porcentaje = parseInt(porcentaje)
-	porcentaje = importe * 21 / 100;
-	resultado = importe + porcentaje;
-	document.getElementById("importe").value = resultado;
-
+	var iva = importe *21 / 100;
+	var final = importe + iva ;
+	alert(final);
 	
 }
 
